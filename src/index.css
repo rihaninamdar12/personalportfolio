@@ -1,13 +1,548 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Signika', sans-serif;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Navbar Styling */
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 60px;
+  width: 100%;
+}
+
+header #menu,
+header #close {
+  display: none;
+  border: none;
+  background-color: white;
+  position: absolute;
+  right: 30px;
+}
+
+header #menu:hover,
+header #close {
+  cursor: pointer;
+}
+
+header h2 {
+  margin-left: 15px;
+  color: rgb(71, 71, 250);
+}
+
+.navbar {
+  width: 700px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#navigation {
+  display: block;
+}
+
+#responsiveNav{
+  display: none;
+}
+.navbar li {
+  list-style: none;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* Home Styling */
+.home .myintro {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(to right, rgb(66, 182, 254), rgb(161, 161, 255));
+  height: 609px;
+  width: 100%;
+  color: white;
+}
+
+.myintro #main {
+  padding-left: 10px;
+  width: 600px;
+}
+
+#main h1 {
+  padding-bottom: 10px;
+  font-size: 54px;
+  font-weight: 500;
+}
+
+#main h3 {
+  padding: 10px 0px;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+#main h4 {
+  padding-bottom: 10px;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+#main button {
+  border: none;
+  width: fit-content;
+  background: linear-gradient(to right, rgb(77, 77, 248), rgb(66, 182, 254));
+  padding: 7px 10px;
+  border-radius: 5px;
+  margin: 20px 0px;
+  box-shadow: 4px 4px rgb(59, 114, 240);
+}
+
+#main button a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 16px;
+  font-family: 'Signika', sans-serif;
+}
+
+#main button:hover {
+  cursor: pointer;
+}
+
+.heading h1,
+.educationSection .heading h1 {
+  font-size: 45px;
+}
+
+.myimage img {
+  width: 500px;
+}
+
+/* About Section Styling */
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 690px;
+}
+
+.about_me {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+
+.about_me #image img {
+  width: 400px;
+}
+
+#info {
+  border: 2px solid whitesmoke;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgb(173, 171, 171), -4px -4px 4px rgb(173, 171, 171);
+  width: 45%;
+  padding-left: 15px;
+}
+
+#info>p {
+  font-size: 17px;
+  padding: 15px 0px;
+}
+
+#info div p {
+  font-size: 19px;
+  padding-top: 15px;
+}
+
+#info button a {
+  font-size: 16px;
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+#info button {
+  border: none;
+  width: fit-content;
+  background: linear-gradient(to right, rgb(77, 77, 248), rgb(66, 182, 254));
+  padding: 7px 10px;
+  border-radius: 5px;
+  margin: 20px 0px;
+}
+
+/* Education Section Styling */
+.educationSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 640px;
+  width: 100%;
+}
+
+.education_TechSkills {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 350px;
+  width: 100%;
+}
+
+.education_TechSkills .education {
+  height: 320px;
+  width: 40%;
+  border: 2px solid whitesmoke;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px rgb(173 171 171), -4px -4px 4px rgb(173 171 171);
+}
+
+.education_TechSkills .techSkills {
+  height: 220px;
+  width: 40%;
+  border: 2px solid whitesmoke;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 4px 4px 4px rgb(173 171 171), -4px -4px 4px rgb(173 171 171);
+}
+
+.education .degree {
+  display: flex;
+  align-items: center;
+  border: 1px solid grey;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgb(179, 176, 176);
+  width: 90%;
+  height: 70px;
+  padding: 0px 6px;
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.degree img {
+  width: 30px;
+  margin-top: 3px;
+  margin-right: 8px;
+}
+
+.techimg {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.techSkills img {
+  width: 60px;
+}
+
+.techSkills img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+
+/* Projects Section Styling */
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 590px;
+}
+
+.projects .project {
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  width: 80%;
+  height: 300px;
+  box-shadow: 4px 4px 4px rgb(173 171 171), -4px -4px 4px rgb(173 171 171);
+}
+
+.project .project-1,
+.project .project-2 {
+  margin: 20px 20px;
+  padding-left: 10px;
+  padding-top: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgb(179, 176, 176);
+  ;
+  width: 70%;
+  height: 100px;
+}
+
+.project-1 a {
+  color: black;
+}
+
+.project-1 a:hover {
+  color: blue;
+}
+
+
+/* Contact Section Styling */
+.contact {
+  width: 100%;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacts {
+  border: 1px solid gray;
+  border-radius: 25px;
+  box-shadow: 4px 4px 4px rgb(162, 162, 162);
+  width: 80%;
+  padding: 20px 20px 0px;
+
+}
+
+.mail,
+.whatsapp,
+.linkedin,
+.map {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact .contacts img {
+  width: 30px;
+  margin-right: 15px;
+}
+
+
+@media (max-width:1150px) {
+
+  #navigation {
+    display: none;
+  }
+
+  header {
+    box-shadow: 1px 1px 3px rgb(160, 160, 160);
+  }
+
+  header #menu,
+  header #close {
+    display: block;
+  }
+
+  #navbar_res {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #navbar_res li {
+    margin: 10px 0px;
+  }
+
+  .home .myintro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: linear-gradient(to right, rgb(66, 182, 254), rgb(161, 161, 255));
+    height: 600px;
+    width: 100%;
+    color: white;
+  }
+
+  .myimage img {
+    width: 300px;
+  }
+
+  .myintro #main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10px;
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  #main h1 {
+    padding-bottom: 10px;
+    font-size: 35px;
+    font-weight: 500;
+  }
+
+  #main h3 {
+    padding: 10px 0px;
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  #main h4 {
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  /* About Section Styling */
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 870px;
+  }
+
+  .about_me {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 540px;
+  }
+
+  .about_me #image img {
+    width: 250px;
+  }
+
+  .about_me #image {
+    margin-top: 15px;
+  }
+
+  #info {
+    margin-top: 30px;
+    width: 90%;
+  }
+
+  #info>p {
+    font-size: 14px;
+    padding: 15px 5px;
+  }
+
+  #info div p {
+    font-size: 17px;
+    padding-top: 15px;
+  }
+
+  #info button a {
+    font-size: 14px;
+  }
+
+  .heading h1,
+  .educationSection .heading h1 {
+    font-size: 25px;
+  }
+
+  /* Education Section Styling */
+  .educationSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 850px;
+    width: 100%;
+  }
+
+  .educationSection .heading {
+    margin-top: 50px;
+  }
+
+  .education_TechSkills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 650px;
+    width: 100%;
+  }
+
+  .education_TechSkills .education {
+    height: 320px;
+    width: 90%;
+  }
+
+  .education_TechSkills .techSkills {
+    height: 220px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .education .degree {
+    display: flex;
+    align-items: center;
+    width: 90%;
+  }
+
+  .education {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  /* Projects Section Styling */
+  .projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 560px;
+  }
+
+  .projects .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+  }
+
+  .project .project-1,
+  .project .project-2 {
+    width: 96%;
+    height: 120px;
+    margin: 10px 5px;
+  }
+
+  .project-1 h3,
+  .project-2 h3 {
+    font-size: 17px;
+  }
+
+  .project-1 p,
+  .project-2 p {
+    font-size: 14px;
+  }
+
+  /* Contact Section Styling */
+  .contact {
+    width: 100%;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .contacts {
+    width: 90%;
+  }
+
 }
