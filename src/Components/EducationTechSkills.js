@@ -7,6 +7,7 @@ function EducationTechSkills(props) {
 
       <section className='educationSection' id='education'>
         <div className="heading">
+          {/* EducationTechSkills */}
           <h1>EDUCATIONAL AND TECHNICAL SKILLS</h1>
         </div>
 
