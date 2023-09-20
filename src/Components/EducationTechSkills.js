@@ -12,7 +12,7 @@ function EducationTechSkills(props) {
 
         <div className='education_TechSkills'>
           <div className="education">
-            <h3>My Educational Background</h3>
+            <h3>My Educational Background.</h3>
             <div className="degree">
               <div><img src={props.education_img} alt="" /></div>
               <div>
